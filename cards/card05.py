@@ -1,5 +1,4 @@
-""" importa classe Card02 """
-from cards.card02 import Card02
+""" Modulo schede """
 from cards.card051 import Card051
 
 

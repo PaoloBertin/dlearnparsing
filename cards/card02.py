@@ -1,3 +1,6 @@
+""" Modulo schede """
+
+
 class Card02:
     """Controllo esecuzione"""
 
@@ -78,7 +81,7 @@ class Card02:
               f"{Card02.nlvect:5d}" +
               f"{Card02.nltftn:5d}" +
               f"{Card02.nptslf:5d}" +
-              f"{Card02.nptslf:5d}" +
+              f"{Card02.numeg:5d}" +
               "\n")
 
         return [sb]

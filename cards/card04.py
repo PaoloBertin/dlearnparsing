@@ -1,3 +1,6 @@
+""" Modulo schede """
+
+
 class Card04:
     """Storie nodali"""
 

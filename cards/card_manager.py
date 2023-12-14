@@ -1,7 +1,4 @@
-""" Importa schede  """
-
-import os
-
+""" Modulo schede  """
 from cards.card00 import Card00
 from cards.card01 import Card01
 from cards.card02 import Card02
@@ -80,21 +77,22 @@ class Cards:
 
         lb = []
 
-        lb = (lb
-              + self.cd00.to_string()
-              + self.cd01.to_string()
-              + self.cd02.to_string()
-              + self.cd03.to_string()
-              + self.cd04.to_string()
-              + self.cd05.to_string()
-              + self.cd06.to_string()
-              + self.cd07.to_string()
-              + self.cd08.to_string()
-              + self.cd09.to_string()
-              + self.cd10.to_string()
-              + ["\n"]
-              + ["*end"]
-              )
+        lb = (
+            lb
+            + self.cd00.to_string()
+            + self.cd01.to_string()
+            + self.cd02.to_string()
+            + self.cd03.to_string()
+            + self.cd04.to_string()
+            + self.cd05.to_string()
+            + self.cd06.to_string()
+            + self.cd07.to_string()
+            + self.cd08.to_string()
+            + self.cd09.to_string()
+            + self.cd10.to_string()
+            + ["\n"]
+            + ["*end"]
+        )
 
         with open(self.file_name_output, "w", encoding="utf-8") as output:
             for item in lb:

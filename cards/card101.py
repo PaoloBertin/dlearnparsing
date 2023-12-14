@@ -1,3 +1,6 @@
+""" Modulo schede """
+
+
 class Card101:
     """Elemento 2D elasticita' isotropa"""
 

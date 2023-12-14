@@ -1,3 +1,6 @@
+""" Modulo schede """
+
+
 class Card03:
     """Sequenze temporali"""
 
@@ -47,16 +50,18 @@ class Card03:
     def to_string(self) -> list[str]:
         """Formattazione"""
 
-        sb = (f"{self.n:5d}" +
-              f"{self.nstep:5d}" +
-              f"{self.ndprt:5d}" +
-              f"{self.nsprt:5d}" +
-              f"{self.nhplt:5d}" +
-              f"{self.niter:5d}" +
-              f"{self.alpha:10.4f}" +
-              f"{self.beta:10.4f}" +
-              f"{self.gamma:10.4f}" +
-              f"{self.dt:10.4f}" +
-              "\n")
+        sb = (
+            f"{self.n:5d}"
+            + f"{self.nstep:5d}"
+            + f"{self.ndprt:5d}"
+            + f"{self.nsprt:5d}"
+            + f"{self.nhplt:5d}"
+            + f"{self.niter:5d}"
+            + f"{self.alpha:10.4f}"
+            + f"{self.beta:10.4f}"
+            + f"{self.gamma:10.4f}"
+            + f"{self.dt:10.4f}"
+            + "\n"
+        )
 
         return [sb]

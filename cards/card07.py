@@ -1,5 +1,4 @@
-""" Modulo """
-from cards.card02 import Card02
+""" Modulo schede """
 from cards.card071 import Card071
 
 
@@ -25,7 +24,5 @@ class Card07:
         for card071 in self.card071s:
             for item in card071.to_string():
                 lb.append(item)
-
-        # lb.append("\n")
 
         return lb

@@ -1,3 +1,4 @@
+""" //TODO """
 class Card053:
     """Incremento nodi"""
 
@@ -33,7 +34,7 @@ class Card053:
         """ Formatting """
 
         sb = ""
-        for j in range(len(self.ninc)):
+        for j in enumerate(self.ninc):
             sb = sb + f"{self.ninc[j]:5d}{self.inc[j]:5d}"
         sb = sb + "\n"
 

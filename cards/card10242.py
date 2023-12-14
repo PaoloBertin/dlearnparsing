@@ -1,3 +1,6 @@
+""" Modulo schede """
+
+
 class Card10242:
     """Generazione elementi truss"""
 

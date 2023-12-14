@@ -1,3 +1,5 @@
+""" Modulo schede """
+
 class Card1022:
     """Proprieta' materiali elementi truss"""
 

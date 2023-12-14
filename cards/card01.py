@@ -1,5 +1,8 @@
+""" Mosulo schede """
+
+
 class Card01:
-    """Titolo lavoro"""
+    """ Card01 Titolo lavoro"""
 
     def __init__(self):
         self.title = None

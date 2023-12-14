@@ -1,3 +1,6 @@
+""" Modulo schede """
+
+
 class Card1011:
     """Controllo gruppo elemento"""
 

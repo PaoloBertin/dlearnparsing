@@ -1,3 +1,4 @@
+""" Modulo schede """
 from cards.card02 import Card02
 
 from cards.card052 import Card052
@@ -54,7 +55,6 @@ class Card051:
         nsd = Card02.nsd
         for i in range(nsd):
             sb = sb + f"{self.x[i]:10.2f}"
-        sb = sb + "\n"
         lb.append(sb)
 
         for card052 in self.card052s:

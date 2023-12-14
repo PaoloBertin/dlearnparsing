@@ -1,4 +1,4 @@
-""" Importa parametri generali """
+""" //TODO """
 from cards.card02 import Card02
 
 from cards.card101 import Card101

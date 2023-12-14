@@ -1,4 +1,4 @@
-""" Import """
+""" Modulo schede """
 from cards.card02 import Card02
 from cards.card073 import Card073
 from cards.card072 import Card072
@@ -41,8 +41,7 @@ class Card071:
                 card072 = Card072()
                 i = card072.initialize(content, i)
                 self.card072s.append(card072)
-
-        i = self.card073.initialize(content, i)
+            i = self.card073.initialize(content, i)
 
         return i
 
@@ -56,10 +55,12 @@ class Card071:
         sb = sb + "\n"
         lb.append(sb)
 
-        for card072 in self.card072s:
-            lb = lb + card072.to_string()
+        if self.numgp > 1:
+            for card072 in self.card072s:
+                lb = lb + card072.to_string()
 
-        lb = lb + self.card073.to_string()
-        lb = lb + ["\n"] + ["\n"]
+            lb = lb + self.card073.to_string()
+            lb = lb + ["\n"]
+        lb = lb + ["\n"]
 
         return lb

@@ -1,3 +1,4 @@
+""" Modulo schede """
 from cards.card1021 import Card1021
 
 

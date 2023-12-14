@@ -1,3 +1,4 @@
+""" Modulo schede """
 class Card052:
     """Generazione nodi"""
 
@@ -32,7 +33,7 @@ class Card052:
         """ Formattazione """
 
         sb = f"{self.m:5d}{self.mgen:5d}"
-        for i in range(len(self.temp)):
+        for i in enumerate(self.temp):
             sb = sb + f"{self.temp[i]:10.2f}"
         sb = sb + "\n"
 

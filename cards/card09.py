@@ -1,4 +1,4 @@
-""" * """
+""" Modulo schede """
 
 
 class Card09:

@@ -1,3 +1,6 @@
+""" Modulo schede """
+
+
 class Card00:
     """Echo dati"""
 
