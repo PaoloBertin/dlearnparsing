@@ -1,4 +1,4 @@
-""" Mosulo schede """
+""" Modulo schede """
 
 
 class Card01:

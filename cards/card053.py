@@ -1,4 +1,4 @@
-""" //TODO """
+""" Modulo schede """
 class Card053:
     """Incremento nodi"""
 
