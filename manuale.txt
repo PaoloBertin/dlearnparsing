@@ -147,6 +147,85 @@ Card 9.0 Condizioni cinematiche iniziali
         26-30   inc(3)      numero nodo da incrementare
 
 Card 10.0 Dati elementi
+    Card 10.2 Elemento 2D materiale isotropo ed elastico
+        Card 10.2.1 Dati di controllo del gruppo
+            1-5     ntype   1
+            6-10    numel   numero elementi del gruppo
+            11-15   numat   numero materiali del gruppo
+            16-20   nsurf   numero schede forze di superficie
+            21-25   nsout   numero storie temporali tensione/deformazione
+            26-30   iopt    tipo analisi
+                                eq.0 stato piano di tensione
+                                eq.1 stato piano di deformazione
+                                eq.2 assialsimmetrico
+            31-35   istprt  codice stampa tensioni
+                                eq.0 stampa in output le tensioni
+                                eq.1 no stampa in output le tensioni
+            36-40   lfsurf  numero della funzione di carico della forze di superficie
+            41-45   lfbody  numero della funzione di carico della forze di volume
+            46-50   nicode  numero punti di integrazione
+                                eq.0 2x2 integrazione di Gauss
+                                eq.1 1 punto di integrazione
+            51-55   ibbar   formulazione
+                                eq.0 formulazione standard
+                                eq.1 formulazione bbar
+            56-60   imass   codice tipo di massa
+                                eq.0 matrice delle masse consistente
+                                eq.1 matrice delle masse concentrate
+                                eq.2 no matrice delle masse
+            61-65   impexp  codice implicito/esplicito
+                                eq.0 elementi impliciti
+                                eq.1 elementi espliciti
+
+        Card 10.1.2 Prorieta' materiale (i5, 5x, 5f10.0)
+            1-5     m           numero identificazione materiale
+            11-20   E(m)        modulo di Young
+            21-30   rho(m)      densita'
+            31-40   rdampm(m)   coefficiente di smorzamento di Rayleigh per la matrice di massa
+            41-50   rdampk(m)   coefficiente di smorzamento di Rayleigh per la matrice di rigidezza
+            51-60   th          spessore
+
+        Card 10.1.3 Vettore componenti accelerazione gravita' (3f10.0)
+            1-10    grav(1)     componente gravita' in direzione 1
+            11-20   grav(2)     componente gravita' in direzione 2
+
+        Card 10.1.4 Definizione elementi
+            Card 10.1.4.1 Nodi elementi (7i5)
+                1-5     n           numero elemnto
+                6-10    m           numero materiale
+                11-15   ien(1,n)    numero primo nodo
+                16-20   ien(2,n)    numero secondo nodo
+                21-25   ien(3,n)    numero terzo nodo
+                26-30   ien(4,n)    numero quarto nodo
+                31-35   ng          parametro generazione
+                                        eq.0 no generazione
+                                        eq.1 generazione dati
+
+            Card 10.1.4.2   Dati generazione elementi (6i5)
+                1-5     nel(1)      numero elementi da generare in direzione 1
+                6-10    incel(1)    incremento numero elemento in direzione 1
+                                        se eq.0 internamente e' posto uguale a 1
+                11-15   inc(1)      incremento numero nodo in direzione 1
+                                        se eq.0 internamente e' posto uguale a 1
+                16-20   nel(2)      numero elementi da generare in direzione 2
+                21-25   incel(2)    incremento numero elemento in direzione 2
+                                        se eq.0 internamente e' posto uguale a 1
+                11-15   inc(1)      incremento numero nodo in direzione 2
+                                        se eq.0 internamente e' posto uguale a 1
+
+        Card 10.1.5 Carichi superficiali (2i5,4f10.0)
+            1-5     ielno(k)    numero elemento (ge.1 e le.numel)
+            6-10    iside(k)    lato elemento (ge.1 le.4)
+            11-20   press(1,k)  pressione al nodo i
+            21-30   press(2,k)  pressione al nodo j
+            31-40   shear(1,k)  tensione di taglio al nodo i
+            41-50   shear(2,k)  tensione di taglio al nodo j
+
+        Card 10.1.6 Storia temporale elemento (3i5)
+            1-5     ishist(1,n)     numero elemento (ge.1 e le.numnp)
+            6-10    ishist(2,n)     numero punto di integrazione (ge.1 e le.nint)
+            11-15   ishist(3,n)     numero componente tensione/deformazione (ge.1 e le.3)
+
     Card 10.2 Elemento truss elastico
         Card 10.2.1 Dati di controllo del gruppo
             1-5     ntype   2

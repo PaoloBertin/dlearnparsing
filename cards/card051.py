@@ -11,7 +11,7 @@ class Card051:
     def __init__(self):
         self.n = None
         self.numgp = None
-        self.x = [0.0, 0.0, 0.0]
+        self.x = []
 
         self.card052s = []
         self.card053 = Card053()
@@ -31,11 +31,11 @@ class Card051:
                 case "numgp":
                     self.numgp = int(val)
                 case "x":
-                    self.x[0] = float(val)
+                    self.x.insert(0, float(val))
                 case "y":
-                    self.x[1] = float(val)
+                    self.x.insert(1, float(val))
                 case "z":
-                    self.x[2] = float(val)
+                    self.x.insert(2, float(val))
 
         if self.numgp > 1:
             for j in range(self.numgp - 1):
@@ -55,6 +55,7 @@ class Card051:
         nsd = Card02.nsd
         for i in range(nsd):
             sb = sb + f"{self.x[i]:10.2f}"
+        sb = sb + "\n"
         lb.append(sb)
 
         for card052 in self.card052s:

@@ -24,7 +24,7 @@ class Card1021:
         self.card1024s = []
 
     def initialize(self, content, i) -> int:
-        """Inizializza"""
+        """ Inizializzazione """
 
         i += 1
         line_card = content[i].split(",")

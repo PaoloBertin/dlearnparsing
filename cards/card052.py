@@ -1,11 +1,14 @@
 """ Modulo schede """
+from cards.card02 import Card02 as cd02
+
+
 class Card052:
     """Generazione nodi"""
 
     def __init__(self):
         self.m = None
         self.mgen = None
-        self.temp = [0.0, 0.0, 0.0]
+        self.temp = []
 
     def initialize(self, content, i) -> int:
         """Inizializza la scheda 5.2"""
@@ -21,11 +24,11 @@ class Card052:
                 case "mgen":
                     self.mgen = int(val)
                 case "tx":
-                    self.temp[0] = float(val)
+                    self.temp.insert(0, float(val))
                 case "ty":
-                    self.temp[1] = float(val)
+                    self.temp.insert(1, float(val))
                 case "tz":
-                    self.temp[2] = float(val)
+                    self.temp.insert(2, float(val))
 
         return i
 
@@ -33,8 +36,9 @@ class Card052:
         """ Formattazione """
 
         sb = f"{self.m:5d}{self.mgen:5d}"
-        for i in enumerate(self.temp):
-            sb = sb + f"{self.temp[i]:10.2f}"
+        nsd = cd02.nsd
+        for j in range(nsd):
+            sb = sb + f"{self.temp[j]:10.2f}"
         sb = sb + "\n"
 
         return [sb]

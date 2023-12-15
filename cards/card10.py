@@ -9,6 +9,7 @@ class Card10:
     """Definizione elementi"""
 
     def __init__(self):
+        self.gntype = []
         self.card10s = []
 
     def initialize(self, content, i) -> int:
@@ -19,12 +20,13 @@ class Card10:
             line_card = content[i + 1].split(",")
             parameters = line_card[0]
             token = parameters.split("=")
-            var = token[0].strip()
             ntype = int(token[1].strip())
             match ntype:
                 case 1:
                     card101 = Card101()
                     i = card101.initialize(content, i)
+                    self.card10s.append(card101)
+                    self.gntype.append(ntype)
                 case 2:
                     card102 = Card102()
                     i = card102.initialize(content, i)
@@ -34,8 +36,8 @@ class Card10:
     def to_string(self) -> list[str]:
         """Formattazione"""
 
-        sb = []
-        for card102 in self.card10s:
-            sb = sb + card102.to_string()
+        lb = []
+        for card10 in self.card10s:
+            lb = lb + card10.to_string()
 
-        return sb
+        return lb

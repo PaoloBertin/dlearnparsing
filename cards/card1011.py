@@ -42,19 +42,20 @@ class Card1011:
                 case "iopt":
                     self.iopt = int(val)
                 case "istprt":
-                    self.istprt = float(val)
-                case "lsurf":
-                    self.lfsurf = float(val)
+                    self.istprt = int(val)
+                case "lfsurf":
+                    self.lfsurf = int(val)
                 case "lfbody":
-                    self.lfbody = float(val)
+                    self.lfbody = int(val)
                 case "nicode":
-                    self.nicode = float(val)
+                    self.nicode = int(val)
                 case "ibbar":
-                    self.ibbar = float(val)
+                    self.ibbar = int(val)
                 case "imass":
-                    self.imass = float(val)
+                    self.imass = int(val)
                 case "impexp":
-                    self.impexp = float(val)
+                    self.impexp = int(val)
+
         return i
 
     def to_string(self) -> list[str]:
@@ -74,6 +75,7 @@ class Card1011:
             f"{self.ibbar:5}"
             f"{self.imass:5}"
             f"{self.impexp:5}"
+            f"\n"
         ]
 
         return sb

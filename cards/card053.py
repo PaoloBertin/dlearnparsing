@@ -5,6 +5,7 @@ class Card053:
     def __init__(self):
         self.ninc = []
         self.inc = []
+        self.incr = []
 
     def initialize(self, content, i) -> int:
         """Inizializza la scheda 5.3"""
@@ -16,26 +17,32 @@ class Card053:
             val = token[1].strip()
             match var:
                 case "ninc1":
-                    self.ninc.append(int(val))
+                    # self.ninc.append(int(val))
+                    self.incr.insert(0, int(val))
                 case "inc1":
-                    self.inc.append(int(val))
+                    # self.inc.append(int(val))
+                    self.incr.insert(1, int(val))
                 case "ninc2":
-                    self.ninc.append(int(val))
+                    # self.ninc.append(int(val))
+                    self.incr.insert(2, int(val))
                 case "inc2":
-                    self.inc.append(int(val))
+                    # self.inc.append(int(val))
+                    self.incr.insert(3, int(val))
                 case "ninc3":
-                    self.ninc.append(int(val))
+                    # self.ninc.append(int(val))
+                    self.incr.insert(4, int(val))
                 case "inc3":
-                    self.inc.append(int(val))
-
+                    # self.inc.append(int(val))
+                    self.incr.insert(5, int(val))
         return i
 
     def to_string(self) -> list[str]:
         """ Formatting """
 
         sb = ""
-        for j in enumerate(self.ninc):
-            sb = sb + f"{self.ninc[j]:5d}{self.inc[j]:5d}"
+        # for j in enumerate(self.ninc):
+        for j in self.incr:
+            sb = sb + f"{j:5d}"
         sb = sb + "\n"
 
         return [sb]

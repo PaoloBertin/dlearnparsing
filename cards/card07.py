@@ -24,5 +24,5 @@ class Card07:
         for card071 in self.card071s:
             for item in card071.to_string():
                 lb.append(item)
-
+        lb = lb + ["\n"]
         return lb

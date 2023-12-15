@@ -1,0 +1,46 @@
+*card00
+iecho=0
+
+*card01
+title=Mensola in stato piano di deformazione. Analisi statica con forze nodali consistenti
+
+*card02
+iexec=0, iacode=1, ireadr=0, iwritr=0, iprtin=0, irank=2, numseq=1, ndout=0, nsd=2, numnp=45, ndof=2, nlvect=1, nltftn=1, nptslf=1, numeg=1
+
+*card03
+   n=1, nstep=1, ndprt=1, nsprt=1, nhplt=0, niter=1,  alpha=0.0,   beta=0.0, gamma=0.0, dt=1.0
+
+*card05
+n=1, numgp=4, x=0.0, y=0.0
+m=0, mgen=0, tx=16.0, ty=0.0
+m=0, mgen=0, tx=16.0, ty=2.0
+m=0, mgen=0, tx= 0.0, ty=2.0
+ninc1=8, inc1=5, ninc2=4, inc2=1
+
+*card06
+n=1,  ne=1 ,  ng=0,  id1=1, id2=1
+n=5,  ne=5,   ng=0,  id1=1, id2=0
+n=6,  ne=41,  ng=5,  id1=1, id2=0
+
+*card07
+n=2,  numgp=0, fx=-7.50e-01, fy= 0.17383
+n=3,  numgp=0, fx=-1.50e+00, fy= 0.13867
+n=4,  numgp=0, fx=-2.25e+00, fy= 0.08008
+n=5,  numgp=0, fx= 0.0e+00,  fy= 0.01465
+n=41, numgp=0, fx= 0.0e+00,  fy=-0.09280
+n=42, numgp=0, fx= 0.0e+00,  fy=-0.17383
+n=43, numgp=0, fx= 0.0e+00,  fy=-0.13867
+n=44, numgp=0, fx= 0.0e+00,  fy=-0.08008
+n=45, numgp=0, fx= 0.0e+00,  fy=-0.01465
+
+*card08
+    l=0.0, t=1.0
+
+*card10
+ntype=1, numel=32, numat=1, nsurf=0, nsout=0, iopt=1, istprt=0, lfsurf=0, lfbody=0, nicode=0, ibbar=0, imass=0, impexp=0
+m=1, E=1.0, pois=0.3, rho=0.0, rdampm=0.0, rdampk=0.0, th=1.0
+gravx=0.0, gravy=0.0
+n=1, m=1, ien1=1, ien2=6, ien3=7, ien4=2,ng=1
+nel1=8, incel1=4, inc1=5, nel1=4, incel1=1, inc1=1
+
+*end

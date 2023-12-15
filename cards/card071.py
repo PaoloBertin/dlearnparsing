@@ -61,6 +61,6 @@ class Card071:
 
             lb = lb + self.card073.to_string()
             lb = lb + ["\n"]
-        lb = lb + ["\n"]
+        # lb = lb + ["\n"]
 
         return lb
